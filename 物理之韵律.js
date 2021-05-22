@@ -117,8 +117,7 @@ function updateOptions() {
 
 /******************外部与模组*******************/
 
-
-
+var isLLZL = false;
 
 /*****************主程序*********************/
 
@@ -161,15 +160,17 @@ function main() {
 
         });
 
-        // MOD
         // for (let i = 0; i < 5; i++) {
         //     try {
         //         acc = vecSum(acc, MODS[i].AttachAcc(star) || 0);
         //     } catch (error) {
         //     }
         // }
+        if (isLLZL) {
+            acc = vecSum(acc, vecZoom(vecRotate(star.vel, deg90), 0.8));
+        }
 
-        //微分迭代
+        //微积分迭代
         star.vel = vecSum(star.vel, vecZoom(acc, delta_t));
         star.pos = vecSum(star.pos, vecZoom(star.vel, delta_t));
     });
