@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ch">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="beauty.css">
+    <script src="./lib/stat.js"></script>
+    <script src="./lib/dat-gui.js"></script>
+    <title>celestial body v1.0</title>
+</head>
+
+<body>
+    <div>
+        <canvas height="800" width="1000" id="_canvas"></canvas>
+    </div>
+    <div>
+        <button class="btn" onclick="zoom('out')">缩小-</button>
+        <button class="btn" onclick="zoom('in')">放大+</button>
+        <button class="btn" onclick="zoom('center')" onkeydown="options.永远居中=true;">居中</button>
+        <button class="btn" onclick="tabRunning()">暂停/开始</button>
+    </div>
+    <div>
+        <button class="btn" onclick="zoom('left')">左移</button>
+        <button class="btn" onclick="zoom('right')">右移</button>
+        <button class="btn" onclick="zoom('up')">上移</button>
+        <button class="btn" onclick="zoom('down')">下移</button>
+        <input type="number" name="step" id="offsetStep" value="30">
+    </div>
+
+</body>
+
+</html>
+
+<script src="数学之魂魄.js"></script>
+<script src="物理之韵律.js"></script>
+<!-- <script>
+    try {
+       for (var i = 1; i <= 5; i++) {
+        //js是目录名
+        document.write("<script type=\"text/javascript\" src=\"mods/Mod_" + i + ".js\"><\/script>");
+    } 
+    } catch (error) {
+        console.log(error);
+    }
+    
+</script> -->
+
+<!-- js替换时注意大小写！ -->
